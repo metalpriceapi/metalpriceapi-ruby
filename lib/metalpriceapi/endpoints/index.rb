@@ -32,7 +32,7 @@ module MetalpriceAPI
       get('convert', options)
     end
 
-    def timeframe(start_date = nil, end_date = nil, base = nil, currencies = nil)
+    def timeframe(start_date, end_date, base = nil, currencies = nil)
       options = removeEmpty({
           'start_date': start_date,
           'end_date': end_date,
