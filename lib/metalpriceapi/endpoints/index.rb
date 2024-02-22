@@ -52,6 +52,14 @@ module MetalpriceAPI
       get('change', options)
     end
 
+    def carat(base = '', date = nil)
+      options = removeEmpty({
+          'base': base,
+          'date': date
+      })
+      get('carat', options)
+    end
+
     private
 
     def removeEmpty(options)

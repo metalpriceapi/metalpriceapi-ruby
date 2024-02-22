@@ -92,6 +92,17 @@ client.change(start_date='2021-04-05', end_date='2021-04-06', base='USD', curren
 ```
 
 [Link](https://metalpriceapi.com/documentation#api_change)
+---
+#### carat(start_date, end_date, base, currencies)
+
+- `base` <[string]> Optional. Pass in a base currency, defaults to USD.
+- `date` <[string]> Optional. Specify date to get Carat for specific date using format `YYYY-MM-DD`. If not specified, uses live rates.
+
+```ruby
+client.carat(base='USD', date='2021-04-06')
+```
+
+[Link](https://metalpriceapi.com/documentation#api_carat)
 
 ---
 **[Official documentation](https://metalpriceapi.com/documentation)**

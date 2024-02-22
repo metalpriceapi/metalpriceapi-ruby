@@ -25,3 +25,6 @@ puts data
 
 data = client.change('2021-04-05', '2021-04-06', 'USD', ['XAU', 'XAG', 'XPD', 'XPT'])
 puts data
+
+data = client.carat('USD', '2021-04-06')
+puts data
