@@ -22,13 +22,13 @@ module MetalpriceAPI
       get(date, options)
     end
 
-    def fetchOHLC(base = nil, currency = nil, date = nil, unit = nil, dateType = nil)
+    def fetchOHLC(base = nil, currency = nil, date = nil, unit = nil, date_type = nil)
       options = removeEmpty({
         base: base,
         currency: currency,
         date: date,
         unit: unit,
-        dateType: dateType
+        date_type: dateType
       })
       get('ohlc', options)
     end
