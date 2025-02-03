@@ -22,6 +22,17 @@ module MetalpriceAPI
       get(date, options)
     end
 
+    def fetchOHLC(base = nil, currency = nil, date = nil, unit = nil, dateType = nil)
+      options = removeEmpty({
+        base: base,
+        currency: currency,
+        date: date,
+        unit: unit,
+        dateType: dateType
+      })
+      get('ohlc', options)
+    end
+
     def convert(from_currency = nil, to_currency = nil, amount = nil, date = nil)
       options = removeEmpty({
           'from': from_currency,
@@ -58,6 +69,10 @@ module MetalpriceAPI
           'date': date
       })
       get('carat', options)
+    end
+
+    def usage
+      get('usage')
     end
 
     private
