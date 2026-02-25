@@ -13,6 +13,15 @@ module MetalpriceAPI
         send("#{key}=", options[key] || MetalpriceAPI.config.send(key))
       end
       @logger ||= MetalpriceAPI::Logger.logger
+      # If server was explicitly passed, update endpoint accordingly
+      if options.key?(:server)
+        self.endpoint = MetalpriceAPI::SERVERS.fetch(options[:server], MetalpriceAPI::SERVERS['us'])
+      end
+    end
+
+    def setServer(server)
+      self.endpoint = MetalpriceAPI::SERVERS.fetch(server, MetalpriceAPI::SERVERS['us'])
+      @connection = nil  # reset memoized connection
     end
 
     class << self
