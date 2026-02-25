@@ -14,6 +14,7 @@ Gem::Specification.new do |s|
   s.homepage = 'http://github.com/metalpriceapi/metalpriceapi-ruby'
   s.licenses = ['MIT']
   s.summary = 'Official MetalpriceAPI Ruby client.'
-  s.add_dependency 'faraday', '>= 1.0.0'
-  s.add_dependency 'faraday_middleware'
+  s.required_ruby_version = '>= 2.7'
+  s.add_dependency 'faraday', '~> 1.0', '>= 1.0.0'
+  s.add_dependency 'faraday_middleware', '~> 1.0'
 end
